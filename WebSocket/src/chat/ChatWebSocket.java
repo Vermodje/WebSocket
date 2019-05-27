@@ -21,14 +21,9 @@ public class ChatWebSocket {
         this.sendString(data);
     }
 
-    //Отключение клиента
-    /*@OnWebSocketClose
-    public void onClose(int statusCode, String reason) {
-        session.close();
-    }*/
 
     //Формирование ответа
-    public void sendString(String data) {
+    private void sendString(String data) {
         try {
             //Переводит канал в режим ответа (session.getRemote() - возвращает ссылку на объект
             // RemoteEndPoint, кот. явл. противоположной стороной диалога) и вызывает метод "передать строку"
